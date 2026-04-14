@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class NewsService {
-  private articleApiUrl = `${environment.apiBaseUrl}/articles`;
+private articleApiUrl = `${environment.apiBaseUrl}/articles`;
 private analyzeApiUrl = `${environment.apiBaseUrl}/analyze`;
 
   constructor(private http: HttpClient) {}
