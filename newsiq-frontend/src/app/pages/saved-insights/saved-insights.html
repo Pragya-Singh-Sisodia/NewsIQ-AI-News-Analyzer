@@ -1,0 +1,28 @@
+
+<div class="page-container">
+
+</div><div style="padding: 20px; max-width: 1000px; margin: auto;">
+ <h1 class="page-title">Saved Insights</h1>
+
+  <div *ngIf="insights.length === 0" class="empty-state">
+  No saved insights yet. Analyze an article to generate insights.
+</div>
+
+  <mat-card class="insight-card" *ngFor="let insight of insights" style="margin-bottom: 20px; padding: 20px;">
+    <h3>{{ insight.title }}</h3>
+
+    <p><strong>Summary:</strong> {{ insight.summary }}</p>
+
+    <p><strong>Key Points:</strong></p>
+    <ul>
+      <li *ngFor="let point of parseKeyPoints(insight.key_points)">
+        {{ point }}
+      </li>
+    </ul>
+
+    <p><strong>Why It Matters:</strong> {{ insight.why_matters }}</p>
+    <p><strong>Simplified:</strong> {{ insight.simplified }}</p>
+    <p><strong>Bias:</strong> {{ insight.bias }}</p>
+    <p><strong>Relevance:</strong> {{ insight.relevance_score }}</p>
+  </mat-card>
+</div>

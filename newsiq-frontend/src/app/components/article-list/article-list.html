@@ -1,0 +1,22 @@
+<div style="margin-top: 10px;">
+  <h2>Recent Articles</h2>
+
+  <div *ngIf="articles.length === 0" class="empty-state">
+    No articles saved yet. Save your first article to begin.
+  </div>
+
+  <mat-card *ngFor="let article of articles" class="article-card">
+    <div class="article-header">
+      <h3>{{ article.title }}</h3>
+      <span class="date-badge">
+        {{ article.created_at | date:'shortDate' }}
+      </span>
+    </div>
+
+    <p class="article-url">{{ article.url }}</p>
+
+    <p class="article-text">
+      {{ article.original_text | slice:0:120 }}...
+    </p>
+  </mat-card>
+</div>

@@ -1,0 +1,48 @@
+.article-card {
+  border-radius: 16px;
+  margin-bottom: 15px;
+  padding: 18px;
+  background: #fffaf4;
+  box-shadow: 0 4px 12px rgba(215, 180, 140, 0.12);
+  border: 1px solid #f6e7d6;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.date-badge {
+  background: #f3e8ff;
+  color: #7b4fa3;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.article-url {
+  color: #666;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.article-text {
+  color: #444;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.empty-state {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 12px;
+}

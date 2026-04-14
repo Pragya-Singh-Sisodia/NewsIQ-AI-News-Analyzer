@@ -1,0 +1,40 @@
+.analysis-container {
+  margin-top: 30px;
+  display: grid;
+  gap: 16px;
+}
+
+.analysis-card {
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #3f51b5;
+}
+
+.analysis-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3f51b5;
+  font-size: 20px;
+}
+
+.analysis-container {
+  margin-top: 30px;
+  display: grid;
+  gap: 16px;
+}
+
+.analysis-card {
+  border-radius: 18px;
+  padding: 22px;
+  background: #fcfbff;
+  box-shadow: 0 6px 18px rgba(143, 120, 180, 0.12);
+  border-left: 6px solid #c9b6ff;
+}
+
+.analysis-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #7a5ca8;
+  font-size: 20px;
+}

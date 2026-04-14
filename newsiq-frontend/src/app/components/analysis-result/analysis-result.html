@@ -1,0 +1,41 @@
+<div *ngIf="analysis" class="analysis-container">
+  <mat-card class="analysis-card">
+    <h2>Summary</h2>
+    <p>{{ analysis.summary }}</p>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Key Points</h2>
+    <ul>
+      <li *ngFor="let point of analysis.key_points">
+        {{ point }}
+      </li>
+    </ul>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Why It Matters</h2>
+    <p>{{ analysis.why_it_matters }}</p>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Simplified Version</h2>
+    <p>{{ analysis.simplified_version }}</p>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Personalized Insight</h2>
+    <p>{{ analysis.personalized_insight }}</p>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Bias / Tone</h2>
+    <p>{{ analysis.bias_tone }}</p>
+  </mat-card>
+
+  <mat-card class="analysis-card">
+    <h2>Relevance Score</h2>
+    <p><strong>{{ analysis.relevance_score }}</strong></p>
+    <p>{{ analysis.relevance_reason }}</p>
+  </mat-card>
+</div>

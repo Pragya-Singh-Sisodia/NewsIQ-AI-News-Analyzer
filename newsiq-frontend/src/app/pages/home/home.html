@@ -1,0 +1,67 @@
+<div class="home-container">
+  <div class="form-section">
+    <h1>Analyze News Article</h1>
+    <p class="subtitle">
+      Save and analyze news articles with AI-powered insights.
+    </p>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Article Title</mat-label>
+      <input matInput [(ngModel)]="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Article URL</mat-label>
+      <input matInput [(ngModel)]="url" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Context Mode</mat-label>
+      <select matNativeControl [(ngModel)]="contextMode">
+        <option value="Student">Student</option>
+        <option value="Job Seeker">Job Seeker</option>
+        <option value="General Reader">General Reader</option>
+      </select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Paste article text</mat-label>
+      <textarea
+        matInput
+        rows="10"
+        [(ngModel)]="original_text">
+      </textarea>
+    </mat-form-field>
+
+    <div class="button-group">
+     <button
+  mat-raised-button
+  color="primary"
+  (click)="saveArticle()"
+  [disabled]="isSaveDisabled()"
+>
+  Save Article
+</button>
+
+      <button
+  mat-raised-button
+  color="accent"
+  (click)="analyzeArticle()"
+  [disabled]="isAnalyzeDisabled()"
+>
+  Analyze Article
+</button>
+    </div>
+
+    <div class="loading-section" *ngIf="isAnalyzing">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Analyzing article...</p>
+    </div>
+
+    <app-analysis-result [analysis]="analysisResult"></app-analysis-result>
+  </div>
+
+  <div class="saved-section">
+    <app-article-list [articles]="articles"></app-article-list>
+  </div>
+</div>
